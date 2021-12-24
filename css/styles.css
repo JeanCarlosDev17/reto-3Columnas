@@ -1,0 +1,132 @@
+* {
+   box-sizing: border-box;
+}
+html body {
+   height: 100%;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   color: #ffffff;
+   font-size: 16px;
+}
+
+body {
+   font-family: "Lexend Deca", sans-serif;
+   font-weight: 400;
+}
+
+.wrapper {
+   margin: 80px auto;
+   width: 95%;
+   /* background-color: hsl(184, 100%, 22%); */
+}
+section body {
+   margin: 0px;
+}
+.content-section {
+   font-size: 0px;
+   width: 100%;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center; /* permite alinear en el Main Axis */
+   align-content: center; /* para alinear en el cross-axis */
+   flex-flow: wrap;
+}
+/* TARJETA O COLUMNA */
+.card {
+   padding-inline: 45px;
+   padding-block: 50px;
+   max-width: 95%;
+   min-width: 250px;
+   margin: auto;
+   min-height: 300px;
+   font-size: 16px;
+}
+
+.card h2 {
+   font-family: "Big Shoulders Display", cursive;
+   font-weight: 700;
+   color: blanchedalmond;
+   margin: 32px, 0, 32px, 0;
+   font-size: 2rem;
+   text-transform: uppercase;
+}
+.card-content p {
+   min-height: 200px;
+}
+.card-button {
+   border-radius: 20px;
+   min-height: 30px;
+   text-align: center;
+   padding: 15px 8px;
+   min-width: 55%;
+   max-width: 80%;
+   border-color: transparent;
+   font-weight: 600;
+   margin: 35px 0;
+   background-color: #ffffff;
+   text-decoration: none;
+}
+.sedan .card-button {
+   color: hsl(31, 77%, 52%);
+}
+.suvs .card-button {
+   color: hsl(184, 100%, 22%);
+}
+.luxury .card-button {
+   color: hsl(179, 100%, 13%);
+}
+
+.sedan {
+   background-color: hsl(31, 77%, 52%);
+   border-radius: 10px 10px 0 0;
+}
+.suvs {
+   background-color: hsl(184, 100%, 22%);
+}
+.luxury {
+   background-color: hsl(179, 100%, 13%);
+   border-radius: 0 0 10px 10px;
+}
+
+@media screen and (min-width: 900px) {
+   body {
+      background-color: lightyellow;
+   }
+
+   .content-section {
+      margin: 0;
+      margin-right: 0;
+      height: 600px;
+      max-width: 1200px;
+   }
+   .card {
+      display: inline-block;
+      /* width: 29%; */
+      min-width: initial;
+      width: 25%;
+      min-height: 300px;
+      max-height: 530px;
+      margin: 0;
+
+      padding-inline: 45px;
+      padding-block: 50px;
+
+      min-height: 300px;
+      font-size: 16px;
+      transition: width 0.3s ease-in-out;
+   }
+   .card-active {
+      width: 35%;
+   }
+   .suvs {
+   }
+   .sedan {
+      border-radius: 10px 0px 0 10px;
+   }
+   .luxury {
+      border-radius: 0 10px 10px 0;
+   }
+}
